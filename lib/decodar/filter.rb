@@ -19,7 +19,7 @@ module Decodar
           (v.credit? && options[:debit_only]) ||
           (v.debit? && options[:credit_only]) ||
           (!v.credit? && !v.debit? && (options[:debit_only] || options[:credit_only])) ||
-          (v.structured_communication? != options[:structured_communication])
+          (v.structured_communication? != options[:structured_communication] && !options[:structured_communication].nil?)
         end
       end
   end
