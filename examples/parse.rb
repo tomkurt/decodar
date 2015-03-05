@@ -1,5 +1,5 @@
 require_relative "../lib/decodar"
-files = Decodar::Parser.new(ARGV[0]||"../exemple_coda2.coda").files
+files = Decodar::Parser.new(File.readlines(ARGV[0]||"../exemple_coda2.coda").join).files
 
 Decodar::Filter.filter(files, :credit_only => true, :structured_communication => true).each do |file|
   puts "------ FILE ----------"

@@ -11,8 +11,8 @@ module Decodar
       end
     end
 
-    def analyze(filepath)
-      lines = ::File.readlines(filepath)
+    def analyze(coda_string)
+      lines = coda_string.split("\n")
       check_version(lines)
       i = 1
       lines.map! do |line|

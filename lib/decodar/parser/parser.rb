@@ -2,14 +2,14 @@ module Decodar
   class Parser
     attr_reader :files
 
-    def initialize(filepath)
-      @filepath = filepath
+    def initialize(coda_string)
+      @coda_string = coda_string
       parse
     end
 
     private
       def parse
-        @records = Decodar::Lexer.instance.analyze(@filepath)
+        @records = Decodar::Lexer.instance.analyze(@coda_string)
         @files  = extract_files 
       end
 
