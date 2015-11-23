@@ -1,7 +1,7 @@
 module Decodar
   class File
     attr_reader :transactions
-    attr_accessor :header, :new_balance, :old_balance, :trailer
+    attr_accessor :header, :new_balance, :old_balance, :trailer, :free_communications
 
     def initialize
       @transactions = {}
