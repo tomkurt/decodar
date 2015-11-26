@@ -11,14 +11,6 @@ module Decodar
       @header.creation_date
     end
 
-    def old_balance
-      @old_balance.signed_amount
-    end
-
-    def new_balance
-      @new_balance.signed_amount
-    end
-
     def duplicate?
       @header.duplicate?
     end
