@@ -8,7 +8,7 @@ module Decodar
       specify_code :application           , 14..15    , :integer
       specify_code :duplicate_code        , 16        , :string   , true
       specify_code :file_reference        , 24..33    , :string   , true
-      specify_code :name_addressee        , 34..59    , :string
+      specify_code :name_addressee        , 34..59    , :string   , true
       specify_code :bic                   , 60..70    , :string
       specify_code :holder_id             , 71..81    , :integer
       specify_code :separate_application  , 83..87    , :integer
